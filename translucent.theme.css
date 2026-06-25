@@ -319,13 +319,56 @@ backdrop-filter: blur(var(--app-blur));
 }
 
 /*
- *  FRIENDS LIST - TRASPARENZA
+ *  FRIENDS LIST - TRASPARENZA COMPLETA
+ *  Rende trasparente tutta la sezione amici
  */
-.container__133bf {
+
+/* Container principale della lista amici */
+.container__133bf,
+.friendsTable__133bf,
+.tabBody__133bf {
     background-color: var(--main-content-color) !important;
     border-start-end-radius: var(--app-radius);
     border-end-end-radius: var(--app-radius);
     border-top: none;
+    backdrop-filter: blur(var(--app-blur)) saturate(var(--liquid-glass-saturation)) brightness(1.1);
+}
+
+/* Rende trasparenti le singole righe degli amici */
+.peopleListItem_cc6179 {
+    background-color: transparent !important;
+    border-radius: var(--list-item-radius);
+    transition: background-color 0.2s ease;
+}
+
+/* Effetto hover sulle righe degli amici */
+.peopleListItem_cc6179:hover {
+    background-color: var(--card-color-hover) !important;
+}
+
+/* Rende trasparente la sezione ActiveNow */
+.activeNow__133bf,
+.container_e8cb0e {
+    background-color: transparent !important;
+}
+
+/* Rende trasparente la barra di ricerca */
+.searchBar__133bf {
+    background-color: rgba(var(--textarea-color), var(--textarea-alpha)) !important;
+    border-radius: var(--input-radius);
+}
+
+/* Rende trasparenti gli header delle categorie */
+.header__133bf,
+.container__5f7a4,
+.content__1e4d3,
+.scroller__1e4d3 {
+    background-color: transparent !important;
+}
+
+/* Rende trasparente il container delle sezioni Online/Offline/etc */
+.container__4f5a7 {
+    background-color: transparent !important;
 }
 
 /*
